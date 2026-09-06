@@ -11,7 +11,6 @@
     <img alt="Transformers 4.53.2" src="https://img.shields.io/badge/Transformers-4.53.2-FFD21E">
     <img alt="TRL 0.19.1" src="https://img.shields.io/badge/TRL-0.19.1-7B61FF">
     <img alt="DeepSpeed 0.15.4" src="https://img.shields.io/badge/DeepSpeed-0.15.4-1F6FEB">
-    <a href="https://github.com/TechCloud-x/TIAO/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TechCloud-x/TIAO?style=flat"></a>
   </p>
 </div>
 
