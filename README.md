@@ -48,11 +48,11 @@ This release provides the complete training and distributed inference path for C
 
 ## 🧠 Method
 
-For every generated trajectory, TIAO independently masks 50% of eligible source tokens. The same completion is then teacher-forced under the full and masked prompts. For completion token $y_t$, define
+For every generated trajectory, TIAO independently masks 50% of eligible source tokens. The same completion is then teacher-forced under the full and masked prompts. Let $x_f$ and $x_m$ denote the full and masked prompts, respectively. For completion token $y_t$, define
 
 $$
-d_t = \log \pi(y_t \mid x_{\mathrm{masked}}, y_{<t})
-      - \log \pi(y_t \mid x_{\mathrm{full}}, y_{<t}),
+d_t = \log \pi_\theta(y_t \mid x_m, y_{1:t-1})
+      - \log \pi_\theta(y_t \mid x_f, y_{1:t-1}),
 \qquad
 I_t = \exp(d_t) - d_t - 1.
 $$
