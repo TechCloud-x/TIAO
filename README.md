@@ -24,6 +24,7 @@ TIAO adds hierarchical token-level credit assignment to group-relative policy op
 - [📌 Overview](#overview)
 - [🧠 Method](#method)
 - [✨ Key Features](#key-features)
+- [📊 Results](#results)
 - [📦 Installation](#installation)
 - [📂 Data Preparation](#data-preparation)
 - [🚀 Training](#training)
@@ -73,6 +74,18 @@ The released configuration uses `beta=0`. The full-versus-masked KL estimate is 
 - **Holistic rewards:** combines UniEval coherence, consistency, fluency, and relevance with a unique-bigram repetition score.
 - **Distributed execution:** supports 32-rank training and inference with DeepSpeed ZeRO-3, `torchrun`, shared checkpoints, and rank-aware output aggregation.
 - **Global test metrics:** inference accumulates per-sample statistics across all ranks before computing final means and standard deviations.
+
+[⬆ Back to top](#top)
+
+<a id="results"></a>
+
+## 📊 Results
+
+<div align="center">
+  <img src="assets/tiao-results-cnn-dailymail.png" alt="CNN/DailyMail results for supervised, zero-shot, and reinforcement-learning methods" width="100%">
+</div>
+
+<p align="center"><em>Table 1. CNN/DailyMail evaluation results. Up arrows indicate higher-is-better metrics, while the down arrow indicates lower standard deviation is better. Bold values and color highlights follow the supplied results table.</em></p>
 
 [⬆ Back to top](#top)
 
@@ -211,7 +224,8 @@ TIAO/
 ├── .gitattributes
 ├── .gitignore
 ├── assets/
-│   └── tiao-banner-4k.png
+│   ├── tiao-banner-4k.png
+│   └── tiao-results-cnn-dailymail.png
 ├── configs/
 │   └── deepspeed_zero3_offload.json
 ├── scripts/
