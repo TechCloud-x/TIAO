@@ -189,11 +189,6 @@ Inference writes `predictions.jsonl`, `metrics.json`, rank-local parts, and rank
 
 | Setting | Default |
 | --- | ---: |
-| Backbone | `Qwen2.5-7B-Instruct` |
-| Training samples | `10,000` randomly selected examples |
-| Validation samples | `500` randomly selected examples |
-| Epochs | `2` |
-| Distributed ranks | `32` |
 | Per-rank micro batch | `4` completions |
 | Gradient accumulation | `2` |
 | Effective completion batch | `256` |
@@ -209,7 +204,6 @@ Inference writes `predictions.jsonl`, `metrics.json`, rank-local parts, and rank
 | Precision | BF16 with TF32 enabled |
 | Checkpoint interval | `100` optimizer steps |
 | Evaluation interval | `100` optimizer steps |
-| Reference-policy KL coefficient | `0` |
 
 The DeepSpeed configuration uses ZeRO Stage 3 with CPU optimizer offload and gathers 16-bit weights when saving a model.
 
