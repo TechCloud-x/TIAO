@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and local configuration
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+key.txt
+*token*
+*secret*
+*credential*
+*proxy*
+
+# Models, datasets, runs, and caches
+models/
+data/
+datasets/
+outputs/
+checkpoints/
+checkpoint-*/
+final-model/
+wandb/
+runs/
+logs/
+*.log
+slurm-*.out
+.cache/
+nltk_data/
+
+# Large model and dataset artifacts
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.parquet
+*.arrow
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
