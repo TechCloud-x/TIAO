@@ -23,6 +23,7 @@ TIAO adds hierarchical token-level credit assignment to group-relative policy op
 - [📌 Overview](#overview)
 - [🧠 Method](#method)
 - [✨ Key Features](#key-features)
+- [🏗️ Architecture](#architecture)
 - [📊 Results](#results)
 - [📦 Installation](#installation)
 - [📂 Data Preparation](#data-preparation)
@@ -73,6 +74,18 @@ The released configuration uses `beta=0`. The full-versus-masked KL estimate is 
 - **Holistic rewards:** combines UniEval coherence, consistency, fluency, and relevance with a unique-bigram repetition score.
 - **Distributed execution:** supports 32-rank training and inference with DeepSpeed ZeRO-3, `torchrun`, shared checkpoints, and rank-aware output aggregation.
 - **Global test metrics:** inference accumulates per-sample statistics across all ranks before computing final means and standard deviations.
+
+[⬆ Back to top](#top)
+
+<a id="architecture"></a>
+
+## 🏗️ Architecture
+
+<div align="center">
+  <img src="assets/tiao-architecture.png" alt="TIAO architecture with group-relative rollout and reward, source-dependency estimation, and trajectory-token credit assignment" width="100%">
+</div>
+
+<p align="center"><em>Figure 1. Overview of TIAO. Group-relative rollouts receive holistic summary rewards, while masked-source dependency estimates shape trajectory-level advantages and focus token-level policy updates.</em></p>
 
 [⬆ Back to top](#top)
 
@@ -218,6 +231,7 @@ TIAO/
 ├── .gitignore
 ├── assets/
 │   ├── tiao-banner-4k.png
+│   ├── tiao-architecture.png
 │   └── tiao-results-cnn-dailymail.png
 ├── configs/
 │   └── deepspeed_zero3_offload.json
