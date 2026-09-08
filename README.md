@@ -85,8 +85,6 @@ The released configuration uses `beta=0`. The full-versus-masked KL estimate is 
   <img src="assets/tiao-architecture.png" alt="TIAO architecture with group-relative rollout and reward, source-dependency estimation, and trajectory-token credit assignment" width="100%">
 </div>
 
-<p align="center"><em>Figure 1. Overview of TIAO. Group-relative rollouts receive holistic summary rewards, while masked-source dependency estimates shape trajectory-level advantages and focus token-level policy updates.</em></p>
-
 [⬆ Back to top](#top)
 
 <a id="results"></a>
