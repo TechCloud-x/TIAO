@@ -14,7 +14,7 @@
   </p>
 </div>
 
-TIAO adds hierarchical token-level credit assignment to group-relative policy optimization for abstractive summarization.
+<p align="center">TIAO adds hierarchical token-level credit assignment to group-relative policy optimization for abstractive summarization.</p>
 
 <a id="table-of-contents"></a>
 
